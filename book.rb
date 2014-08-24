@@ -2,41 +2,41 @@
 @library=[] #array of book hash
 
 
-# class Book 
-# 	attr_accessor :title, :author, :status
-# 	# status can be :available, :issued,  :not_availanle
-# 	def issue
-# 		self.status = :issued
-# 	end
-# end
+class Book 
+	attr_accessor :title, :author, :status
+	# status can be :available, :issued,  :not_availanle
+	def issue
+		self.status = :issued
+	end
+end
 
-# class library
+class library
 
-# 	def intialize
-# 		@book_list = Array.new
-# 	end
+	def intialize
+		@book_list = Array.new
+	end
 	
-# 	attr_accessor :book_list
+	attr_accessor :book_list
 	
-# 	def add_book(book)
-# 			@book_list << book
-# 	end
+	def add_book(book)
+			@book_list << book
+	end
 
-# 	def lend_book book
-# 		book = search_book(book)
-# 		return false unless book
-# 		book.issue
-# 	end
+	def lend_book book
+		book = search_book(book)
+		return false unless book
+		book.issue
+	end
 
-# 	def search_book (book)
-# 		@book_list.include? book 
-# 	end
+	def search_book (book)
+		@book_list.include? book 
+	end
 
-# 	def return_book book
-# 		book.return
-# 	end
+	def return_book book
+		book.return
+	end
 
-# end
+end
 
 while @endall do
 	puts "1.Enter the book record"
