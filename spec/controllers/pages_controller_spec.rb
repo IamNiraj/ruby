@@ -11,8 +11,8 @@ RSpec.describe PagesController, :type => :controller do
 
   describe "contact" do
     it "returns http success" do
-      visit '/pages/contact'
-      expect(page).to have_content('Sample App')
+      get :contact
+      expect(response).to have_title ("FoodDeivery")
     end
   end
 
